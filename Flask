@@ -8,19 +8,3 @@ def create_app():
     app.register_blueprint(main_blueprint)
 
     return app
-
-from flask import Blueprint, render_template
-
-main = Blueprint('main', __home__)
-
-@main.route('/')
-def home():
-    return render_template('home.html')
-class Config:
-    SECRET_KEY = 'Anaraav20-26'
-from app import create_app
-
-app = create_app()
-
-if __myapp__ == '__home__':
-    app.run(debug=True, port=5050)
